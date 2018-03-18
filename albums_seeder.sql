@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS albums (
   genre VARCHAR(305),
   PRIMARY KEY (id)
 );
-truncate albums;
+
 
 INSERT INTO albums (artist, name, release_date, sales, genre)
   VALUES
@@ -35,7 +35,7 @@ INSERT INTO albums (artist, name, release_date, sales, genre)
       ('The Beatles', '1', 2000, 31, 'Rock'),
       ('Madonna', 'Immaculate Collection', 1990, 30, 'Pop, Dance'),
       ('The Beatles', 'DAbbey Road', 1969, 30, 'Rock'),
-      ('Bruce Springsteen', 'Born in the U.S.A.', 1984, 30, 'Rock'),
+      ('Bruce Springsteen', 'Born in the USA', 1984, 30, 'Rock'),
       ('Dire Straits', 'Brother in Arms', 1985, 30, 'Rock, Pop'),
       ('James Horner', 'Titanic', 1997, 30, 'Soundtrack'),
       ('Metallic', 'Metallic', 1991, 30, 'Thrash Metal'),
