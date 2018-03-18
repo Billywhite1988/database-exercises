@@ -27,7 +27,7 @@ INSERT INTO albums (artist, name, release_date, sales, genre)
       ('Alanis Morissette', 'Jagged Little Pill', 1995, 33, 'Alternative Rock'),
       ('Shania Twain', 'Come On Over', 1997, 33, 'Country, Pop'),
       ('Celine Dion', 'Falling Into You', 1997, 32, 'Pop, Soft Rock'),
-      ('The Beatles', 'Sgt Peppers Lonely Hearts Club Band', 1967, 32, 'Rock'),
+      ('The Beatles', 'Sgt. Peppers Lonely Hearts Club Band', 1967, 32, 'Rock'),
       ('Eagles', 'Hotel California', 1976, 32, 'Rock, Soft Rock'),
       ('Various Artist', 'Dirty Dancing', 1987, 32, 'Pop, Rock, R&B'),
       ('Adele', '21', 2011, 31, 'Pop, Soul'),
