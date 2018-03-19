@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS albums (
   PRIMARY KEY (id)
 );
 
+truncate albums;
 
 INSERT INTO albums (artist, name, release_date, sales, genre)
   VALUES
@@ -42,5 +43,5 @@ INSERT INTO albums (artist, name, release_date, sales, genre)
       ('Nirvana', 'Nevermind', 1991, 30, 'Alternative Rock'),
       ('Pink Floyd', 'The Wall', 1979, 30, 'Progressive Rock'),
       ('Santana', 'Supernatural', 1999, 30, 'Rock'),
-      ('Guns N Roses', 'Appetite for Destruction', 1987, 30, 'Hard Rock')
+      ('Guns N Roses', 'Appetite for Destruction', 1987, 30, 'Hard Rock');
 
