@@ -24,6 +24,8 @@ WHERE e. gender = 'F' AND de.to_date >= curdate()
 ORDER BY d.dept_name;
 
 #Find the current titles of employees currently working in the Customer Service department.
+DESCRIBE titles;
+DESCRIBE departments;
 
 SELECT t.title, COUNT(e.emp_no)
 FROM titles t
@@ -44,3 +46,14 @@ FROM employees e
   JOIN departments d ON d.dept_no = dm.dept_no
 WHERE dm.to_date >= CURDATE() AND s.to_date >= CURDATE()
 ORDER BY d.dept_name;
+
+# Bonus -- Find the names of all current employees, their department name, and their current manager's name
+
+SELECT concat(e.first_name, " ", e.last_name) AS "Employee Name", departments.dept_name AS "Department Name", concat(managers.first_name, " ", managers.last_name) AS "Manager Name"
+FROM employees AS e
+  JOIN dept_emp ON e.emp_no = dept_emp.emp_no
+  JOIN departments ON dept_emp.dept_no = departments.dept_no
+  JOIN dept_manager ON departments.dept_no = dept_manager.dept_no
+  JOIN employees AS managers ON dept_manager.emp_no = managers.emp_no
+WHERE dept_emp.to_date > curdate()
+      AND dept_manager.to_date > curdate()
