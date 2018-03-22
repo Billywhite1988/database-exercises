@@ -49,13 +49,12 @@ WHERE dept_name = 'Customer Service'
 
 -- get all first and last names of current Sales department employees
 
-SELECT CONCAT_WS(' ' e.first_name, e.last_name)
+SELECT d.dept_name AS 'Department Name', CONCAT(e.first_name, ' ', e.last_name) AS 'Employees Name'
 FROM employees e
-WHERE DEPT_NO IN (SELECT dept_no FROM departments WHERE dept_name = 'Sales')
-      AND emp.to_date > NOW();
+JOIN departments d ON e.dept_no = d.dept_no AND dept_name = 'Sales' AND de.to_date >= CURDATE()
+ORDER BY d.dept_name;
 
 -- find first name and last of all department managers
-
 
 
 
